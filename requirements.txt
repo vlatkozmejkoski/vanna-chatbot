@@ -1,2 +1,2 @@
-vanna
-streamlit[postgres]
+vanna[postgres]
+streamlit
