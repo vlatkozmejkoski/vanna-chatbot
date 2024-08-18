@@ -1,4 +1,8 @@
 # Sample Vanna Chatbot querying against PostgreSQL Database
+## Database
+We use PostgreSQL driver, by default vanna uses psyocopg.
+You can setup local postgre and execute the scripts in the repo to have some data to query against.
+
 ## Setup
 1. Setup your venv
 2. Run `pip install -r requirements.txt`
