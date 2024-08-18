@@ -8,8 +8,10 @@ from vanna.remote import VannaDefault
 vanna_model_name = st.secrets.vanna.model
 vanna_api_key = st.secrets.vanna.api_key
 vn = VannaDefault(model=vanna_model_name, api_key=vanna_api_key)
+postgre_secrets = st.secrets.pg
 
-vn.connect_to_postgres("localhost", user="postgres", password="master", dbname="vanna-test", port=5432)
+vn.connect_to_postgres(host=postgre_secrets.host, user=postgre_secrets.user, password=postgre_secrets.password,
+                       dbname=postgre_secrets.db_name, port=postgre_secrets.port)
 
 
 def response_generator(response):
